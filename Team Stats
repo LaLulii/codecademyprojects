@@ -1,0 +1,71 @@
+const team = {
+  _players: [
+    {
+      firstName: 'Mike',
+      lastName: 'Wizowski',
+      age: 32
+    },
+    {
+      firstName: 'James',
+      lastName: 'Sullivan',
+      age: 33
+    },
+    {
+      firstName: 'Randal',
+      lastName: 'Boggs',
+      age: 30
+    },
+  ],
+  _games: [
+    {
+      opponent: 'Chiefs',
+      teamPoints: 25,
+      opponentPoints: 23
+    },
+    {
+      opponent: 'Raiders',
+      teamPoints: 16,
+      opponentPoints: 26
+    },
+    {
+      opponent: 'Broncos',
+      teamPoints: 21,
+      opponentPoints: 12
+    },
+  ],
+  get players(){
+    return this._players;
+  },
+  get games(){
+    return this._games;
+  },
+  addPlayer (firstName, lastName, age) {
+    const player = {
+      firstName: firstName,
+      lastName: lastName,
+      age: age
+    };
+    return this._players.push(player);
+  },
+  addGame (oppName, teamPoints, oppPoints) {
+    const game = {
+      opponent: oppName,
+      teamPoints: teamPoints,
+      opponentPoints: oppPoints
+    };
+    return this._games.push(game);
+  },
+};
+
+
+team.addPlayer('Steph', 'Curry', 28);
+team.addPlayer('Lisa', 'Leslie', 44);
+team.addPlayer('Bugs', 'Bunny', 76);
+
+team.addGame('Dragons', 21, 10);
+team.addGame('Lizards', 10, 33);
+team.addGame('Knights', 8, 12);
+
+//console.log(team._players);
+//console.log(team._games);
+
